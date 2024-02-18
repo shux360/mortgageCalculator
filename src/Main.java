@@ -4,7 +4,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int principal = 0;
+        int principal;
+        double anInterRate;
+        double period;
+
         do {
             System.out.print("Principal ($1K - $1M): ");
             principal = scanner.nextInt();
@@ -14,7 +17,7 @@ public class Main {
         }
         while ((principal < 1000) || (principal > 1000000));
 
-        double anInterRate = -1;
+
         do {
             System.out.print("Annual Interest Rate: ");
             anInterRate = scanner.nextDouble();
@@ -24,7 +27,7 @@ public class Main {
         }
         while ((anInterRate <= 0) || (anInterRate > 30));
 
-        double period = -1;
+
         do {
             System.out.print("Period (Years): ");
             period = scanner.nextDouble();
